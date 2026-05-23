@@ -1,0 +1,49 @@
+# High-priority seed v3 (strict ICP)
+# Goal: SMB DTC self-hosted sellers and China distributors likely in ~5-300 orders/day.
+# Excluded: obvious large/global brands, enterprise groups, unclear B2C mass brands.
+# One domain per line.
+
+# Tier A: likely SMB DTC sports-eyewear brands
+tifosioptics.com
+melonoptics.com
+albaoptics.cc
+ombraz.com
+heatwavevisual.com
+tripoint.com
+opticnerve.com
+svencansee.com
+dzoptics.com
+kamikazeeyewear.com
+liivevision.com.au
+sinner.eu
+carve.com.au
+liquid-eyewear.com
+waterhaul.co
+corneakauai.com
+barzoptics.com
+beyondcoastal.com
+sporteyes.com
+7eye.com
+recspecs.com
+fuse-lenses.com
+revantoptics.com
+seekoptics.com
+
+# Tier B: China-focused distributor/reseller candidates (manual verify)
+coolchange.com
+queshark.com
+scvcn.com
+sportsexpert.com.cn
+
+# Tier C: keep but verify size before outreach
+sunski.com
+sciconsports.com
+zealoptics.com
+saliceocchiali.it
+bliz.com
+otiseyewear.com
+flyingfisherman.com
+hobieeyewear.com
+edgeeyewear.com
+panoptx.com
+spektrum.com
