@@ -1,0 +1,48 @@
+# DTC Sports Eyewear Lead Finder
+
+Python project to discover and crawl official DTC sports eyewear brand websites and extract **public contact emails**.
+
+## Features
+- Discovers candidate websites via DuckDuckGo keyword search.
+- Supports manual fallback seeds via `data/seed_urls.txt` when search scraping is blocked.
+- Filters obvious marketplaces, blogs/news/review domains, and blocked major brands.
+- Crawls public pages only with robots checks and CAPTCHA/anti-bot detection.
+- Uses polite crawling:
+  - Normal User-Agent
+  - Random 1-3 second delay between requests
+  - Max 15 pages per website
+  - Timeout + continue on errors
+- Extracts and deduplicates public emails.
+- Scores each lead and exports both CSV and Excel:
+  - `output/dtc_sports_eyewear_leads.csv`
+  - `output/dtc_sports_eyewear_leads.xlsx`
+
+## Install
+```bash
+python -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+```
+
+## Usage
+```bash
+python src/main.py
+```
+
+Optional args:
+```bash
+python src/main.py --seed-file data/seed_urls.txt --output-dir output --max-sites 120 --max-pages 15
+```
+
+## Seed URL workflow (fallback)
+If search-engine scraping is blocked or returns weak results:
+1. Open `data/seed_urls.txt`
+2. Add official brand homepages (one per line)
+3. Run `python src/main.py`
+
+The crawler will automatically process those websites and extract public emails.
+
+## Notes
+- The script only accesses public pages and does not bypass login/CAPTCHA/protected pages.
+- It skips disallowed robots pages when detectable.
+- Privacy/legal emails are kept but labeled as lower value (`email_type=privacy`).
